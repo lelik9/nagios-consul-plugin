@@ -41,6 +41,7 @@ def get_json_from_url(url):
     r = urllib.urlopen(url)
     response = r.read()
     dump("Response: " + str(response))
+    dump("Status code: " + str(r.getcode()))
 
     return json.loads(response)
 
